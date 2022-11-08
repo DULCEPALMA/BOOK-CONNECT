@@ -1,0 +1,12 @@
+.jumbotron {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  height: 160px; 
+}
+
+
+
+body {
+    background-color: #DDD3B2 ;
+}
