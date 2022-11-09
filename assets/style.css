@@ -1,2 +1,63 @@
+<<<<<<< HEAD
 
 
+=======
+header {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  height: 160px; 
+}
+
+h1 {
+    font-family: 'News Cycle', sans-serif ;
+    font-size: 50px;
+}
+
+body {
+    background-color: #DDD3B2 ;
+}
+
+search input[type=text] {
+    float: right;
+    padding: 15px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.grid2x2 {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .box { 
+    margin: 20px;
+    flex: 1;
+ }
+
+ .vl {
+    border-left: 6px solid green;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+  }
+  
+  /*
+  .grid2x2 > div {
+    display: flex; 
+    flex-basis: calc(50% - 40px);  
+    justify-content: center;
+    flex-direction: column;
+  }
+  .grid2x2 > div > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+>>>>>>> 387fbbcd301e6ed44b07bd57bc00f7499ed81bae
