@@ -21,20 +21,37 @@
     </header>
 
     <main class = "grid2x2">
-        <search class="box box1">
+        <div class="box box1">
+        <form id="search-form">
             <div>
                 <input type="text" placeholder="Search a Book Title..">
             </div>
-            </div>
-        </div>
-
-        <info class="box box2">
             <div>
-                <h2> Search a book to find at your local library! Also find related book or movies.</h2>
+                <label for="search-by">Search by</label>
+                <select id="search-by">
+                    <option value="author">Author</option>
+                    <option value="book-title">Book Title</option>
+                </select>
             </div>
+            <div>
+                <button type="submit">Search</button>
+            </div>
+        </form>
         </div>
 
+        <div class="box box2">
+            <div>
+                <h2> Search a book to find at your local library! 
+                    You can also find other related books or movies.</h2>
+            </div>
         </div>
+    <div id="open-library-results">
+
+    </div>
+
+    <div id="library-of-congress-results">
+
+    </div>
 
     </main>
     </body>
