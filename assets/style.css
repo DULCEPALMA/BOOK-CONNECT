@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+
+=======
 header {
   display: flex;
   justify-content: center;
@@ -8,6 +12,11 @@ header {
 h1 {
     font-family: 'News Cycle', sans-serif ;
     font-size: 50px;
+    color: #B2D2DD;
+}
+
+h2 {
+    color: #364A30;
 }
 
 body {
@@ -35,15 +44,8 @@ search input[type=text] {
     flex: 1;
  }
 
- .vl {
-    border-left: 6px solid green;
-    height: 500px;
-    position: absolute;
-    left: 50%;
-    margin-left: -3px;
-    top: 0;
-  }
-  
+ 
+
   /*
   .grid2x2 > div {
     display: flex; 
@@ -56,3 +58,4 @@ search input[type=text] {
     justify-content: center;
     flex-direction: row;
   }
+>>>>>>> 387fbbcd301e6ed44b07bd57bc00f7499ed81bae
