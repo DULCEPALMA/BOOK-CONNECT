@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+    <head>
+        <title>Book Connect</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Trispace:wght@700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./style.css">
+
+    </head>
+
+    <body class="">   
+    <header class="p-5 text-center text-white bg-primary" >
+        <h1>Book Connect</h1>
+        
+    </header>
+
+    <main class = "grid2x2">
+        <div class="box box1">
+        <form id="search-form">
+            <div>
+                <input type="text" placeholder="Search a Book Title..">
+            </div>
+            <div>
+                <label for="search-by">Search by</label>
+                <select id="search-by">
+                    <option value="author">Author</option>
+                    <option value="book-title">Book Title</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+        </div>
+
+        <div class="box box2">
+            <div>
+                <h2> Search a book to find at your local library! 
+                    You can also find other related books or movies.</h2>
+            </div>
+        </div>
+    <div id="open-library-results">
+
+    </div>
+
+    <div id="library-of-congress-results">
+
+    </div>
+
+    </main>
+    <script src="./assets/script.js"></script>
+    </body>
+    </html>
