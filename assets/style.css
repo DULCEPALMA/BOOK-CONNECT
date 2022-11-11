@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
 header {
   display: flex;
   justify-content: center;
@@ -13,6 +11,7 @@ h1 {
     font-family: 'News Cycle', sans-serif ;
     font-size: 50px;
     color: #B2D2DD;
+    justify-content: center;
 }
 
 h2 {
@@ -58,4 +57,3 @@ search input[type=text] {
     justify-content: center;
     flex-direction: row;
   }
->>>>>>> 387fbbcd301e6ed44b07bd57bc00f7499ed81bae
