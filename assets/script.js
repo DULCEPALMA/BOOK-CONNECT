@@ -26,11 +26,19 @@ fetch('http://openlibrary.org/search/authors.json?q=twain')
   })
   .then(function (data) {
     console.log(data);
+    if(searchBy==="author"){
+      //display author
+      for(var i=0;data.docs.length>i;i++){
+        var listitem= document.createElement("li");
+        listitem.textContent=data.docs[i].name+"- top work of the author:  " + data.docs[i].top_work;
+        locEl.append(listitem);
+      }
+    }else {
+      //display book title
+    }
     //update open library results
+
   });
-  if (format) {
-    locQueryUrl = 'https://openlibrary.org/search' + format + '/?fo=json';
-  }
   
   
 }
@@ -43,15 +51,14 @@ fetch('https://www.loc.gov/search/?fo=json')
     return response.json();
   })
   .then(function (data) {
-    console.log(data);
+    console.log(data.results);
+    for(var i=0;data.results.length>i;i++){
+      var listitem= document.createElement("li");
+      listitem.textContent=data.results[i].title;
+      locEl.append(listitem);
+    }
     //update library of congress results
-  });
-  if (format) {
-    locQueryUrl = 'https://www.loc.gov/' + format + '/?fo=json';
-  }
 
-  locQueryUrl = locQueryUrl + '&q=' + query;
-if (format) {
-  locQueryUrl = 'https://loc.gov/search' + format + '/?jason';
-}
+  });
+  
 }
