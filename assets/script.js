@@ -20,7 +20,7 @@ doLibaryOfCongressSearch(searchInfoEl.value, searchByEl.value)
 //open libaray search
 function doOpenLibrarySearch(searchInfo, searchBy){
 console.log("doing open library search")
-fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=100')
+fetch('https://openlibrary.org/search/?fo=json')
   .then(function (response) {
     return response.json();
   })
@@ -35,7 +35,7 @@ fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=100')
 //library of congress
 function doLibaryOfCongressSearch(searchInfo, searchBy){
 console.log("doing Libary of congress search")
-fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=100')
+fetch('https://www.loc.gov/search/?fo=json')
   .then(function (response) {
     return response.json();
   })
