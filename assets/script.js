@@ -1,5 +1,5 @@
 var formEl = document.getElementById("search-form");
-var olrEl = document.getElementById("open-libary-results");
+var olrEl = document.getElementById("open-library-results");
 var locEl = document.getElementById("library-of-congress-results");
 var searchInfoEl = document.querySelector("#search-form input[type='text']");
 var searchByEl = document.getElementById("search-by");
@@ -19,8 +19,14 @@ doLibaryOfCongressSearch(searchInfoEl.value, searchByEl.value)
 }
 //open libaray search
 function doOpenLibrarySearch(searchInfo, searchBy){
+  var url = "";
+  if(searchBy==="author"){
+url='http://openlibrary.org/search/authors.json?q='+ searchInfo; 
+  }else{
+url='http://openlibrary.org/search.json?title='+ searchInfo;
+  }
 console.log("doing open library search")
-fetch('http://openlibrary.org/search/authors.json?q=twain')
+fetch(url)
   .then(function (response) {
     return response.json();
   })
@@ -31,9 +37,15 @@ fetch('http://openlibrary.org/search/authors.json?q=twain')
       for(var i=0;data.docs.length>i;i++){
         var listitem= document.createElement("li");
         listitem.textContent=data.docs[i].name+"- top work of the author:  " + data.docs[i].top_work;
-        locEl.append(listitem);
+        olrEl.append(listitem);
       }
     }else {
+      for(var i=0;data.docs.length>i;i++){
+        var listitem= document.createElement("li");
+       // listitem.textContent=data.docs[i].title+ "- The Author of this title is " + data.docs[i].author_name[0];
+        listitem.textContent=data.docs[i].title;
+        olrEl.append(listitem);
+      } 
       //display book title
     }
     //update open library results
@@ -45,17 +57,28 @@ fetch('http://openlibrary.org/search/authors.json?q=twain')
 
 //library of congress
 function doLibaryOfCongressSearch(searchInfo, searchBy){
+  var url = "";
+  if(searchBy==="author"){
+ url='https://www.loc.gov/search/?fo=json&q='+ searchInfo; 
+  }else{
+url='https://www.loc.gov/books/?fo=json&q='+ searchInfo;
+  }
 console.log("doing Libary of congress search")
-fetch('https://www.loc.gov/search/?fo=json') 
+fetch(url) 
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
-    console.log(data.results);
-    for(var i=0;data.results.length>i;i++){
-      var listitem= document.createElement("li");
-      listitem.textContent=data.results[i].title;
-      locEl.append(listitem);
+    locEl.textContent = "";
+    if(searchBy==="author"){
+      //display author
+      for(var i=0;data.results.length>i;i++){
+        var listitem= document.createElement("li");
+        listitem.textContent=data.results[i].title;
+        locEl.append(listitem);
+      }
+    }else {
+      //display book title
     }
     //update library of congress results
 
