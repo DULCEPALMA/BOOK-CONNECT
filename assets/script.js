@@ -47,6 +47,7 @@ fetch(url)
         olrEl.append(listitem);
       } 
       //display book title
+      
     }
     //update open library results
 
@@ -77,8 +78,13 @@ fetch(url)
         listitem.textContent=data.results[i].title;
         locEl.append(listitem);
       }
-    }else {
+    }else {for(var i=0;data.docs.length>i;i++){
+      var listitem= document.createElement("li");
+      // listitem.textContent=data.docs[i].title+ "- The Author of this title is " + data.docs[i].author_name[0];
+      listitem.textContent=data.docs[i].title;
+      olrEl.append(listitem);
       //display book title
+      
     }
     //update library of congress results
 
