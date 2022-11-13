@@ -19,6 +19,10 @@ body {
     background-color: #DDD3B2 ;
 }
 
+main {
+  padding: 20px;
+}
+
 search input[type=text] {
     float: right;
     padding: 15px;
@@ -28,12 +32,10 @@ search input[type=text] {
     font-size: 17px;
 }
 
-.grid2x2 {
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
+.row {
+  padding: 20px;
+}
+  
 
   .box { 
     margin: 20px;
