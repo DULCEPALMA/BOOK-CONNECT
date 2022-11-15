@@ -78,20 +78,13 @@ fetch(url)
         listitem.textContent=data.results[i].title;
         locEl.append(listitem);
       }
-<<<<<<< HEAD
-    }else {for(var i=0;data.docs.length>i;i++){
-      var listitem= document.createElement("li");
-      // listitem.textContent=data.docs[i].title+ "- The Author of this title is " + data.docs[i].author_name[0];
-      listitem.textContent=data.docs[i].title;
-      olrEl.append(listitem);
-=======
+
     }else {
       for(var i=0;data.docs.length>i;i++){
         var listitem= document.createElement("li");
         listitem.textContent=data.docs[i].title+ "- The Author of this title is " + data.docs[i].author_name[0];
         listitem.textContent=data.docs[i].title;
         locEl.append(listitem);
->>>>>>> a2067d0 (loc info and local starage)
       //display book title
       
     }
