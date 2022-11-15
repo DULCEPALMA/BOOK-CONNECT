@@ -100,7 +100,4 @@ fetch(url)
   });
   
 }
- function rememberList(){
-  
- }
-
+ 
