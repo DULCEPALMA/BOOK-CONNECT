@@ -86,7 +86,7 @@ fetch(url)
         listitem.textContent=data.docs[i].title;
         locEl.append(listitem);
       //display book title
-      
+      }
     }
     //update library of congress results
 
